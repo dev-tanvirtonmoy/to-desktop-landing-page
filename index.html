@@ -27,11 +27,11 @@
         theme: {
           extend: {
             colors: {
-              clifford: "#da373d",
+              primary: "#3238f2",
             },
             fontFamily: {
-              poppins: ["Poppins", "sans-serif"],
-              inter: ["Inter", "sans-serif"],
+              "display": ["Poppins", "sans-serif"],
+              "body": ["Inter", "sans-serif"],
             },
           },
         },
@@ -40,15 +40,103 @@
   </head>
   <body>
     <!-- Header section start from here -->
-    <header></header>
+    <header>
+      <!-- Navbar start from here -->
+      <nav class="p-3 bg-white flex justify-between items-center">
+        <a href="#" class="flex gap-2 items-center" id="brand">
+          <img
+            class="object-cover max-w-12 max-h-12"
+            src="./assets/1.png"
+            alt="Logo of website"
+          />
+          <span class="text-lg font-medium font-display">ToDesktop</span>
+        </a>
+
+        <!-- Nav Menu -->
+        <ul id="nav-menu" class="hidden lg:flex gap-12">
+          <li>
+            <a href="#" class="font-medium hover:text-primary capitalize"
+              >Pricing</a
+            >
+          </li>
+          <li>
+            <a href="#" class="font-medium hover:text-primary capitalize"
+              >docs</a
+            >
+          </li>
+          <li>
+            <a href="#" class="font-medium hover:text-primary capitalize"
+              >changelog</a
+            >
+          </li>
+          <li>
+            <a href="#" class="font-medium hover:text-primary capitalize"
+              >blog</a
+            >
+          </li>
+          <li>
+            <a href="#" class="font-medium hover:text-primary capitalize"
+              >login</a
+            >
+          </li>
+        </ul>
+
+        <button class="hidden lg:flex items-center gap-2 capitalize border border-gray-400 px-6 py-2 rounded-lg hover:border-gray-600">
+          <img src="./assets/2.svg" alt="" />
+          <span class="font-body">electron developer</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+        <button class="p-2 lg:hidden" onclick="handleMenu()">
+          <i class="fa-solid fa-bars text-gray-600"></i>
+        </button>
+
+        <div id="nav-dialog" class="hidden fixed z-10 lg:hidden inset-0 bg-white p-3">
+        <div id="nav-bar" class="flex justify-between">
+          <a href="#" class="flex gap-2 items-center" id="brand">
+            <img
+              class="object-cover max-w-12 max-h-12"
+              src="./assets/1.png"
+              alt="Logo of website"
+            />
+            <span class="text-lg font-medium font-display">ToDesktop</span>
+          </a>
+
+          <button class="p-2 lg:hidden" onclick="handleMenu()">
+            <i class="fa-solid fa-xmark text-gray-600"></i>
+          </button>
+        </div>
+
+        <div class="mt-6">
+          <a href="#" class="capitalize block font-medium m-3 p-3 hover:bg-gray-50 rounded-lg">Pricing</a>
+          <a href="#" class="capitalize block font-medium m-3 p-3 hover:bg-gray-50 rounded-lg">docs</a>
+          <a href="#" class="capitalize block font-medium m-3 p-3 hover:bg-gray-50 rounded-lg">changelog</a>
+          <a href="#" class="capitalize block font-medium m-3 p-3 hover:bg-gray-50 rounded-lg">blog</a>
+          <a href="#" class="capitalize block font-medium m-3 p-3 hover:bg-gray-50 rounded-lg">login</a>
+        </div>
+        <div class="h-[1px] bg-gray-300"></div>
+
+        <button class="mt-6 w-full flex items-center gap-2 capitalize px-6 py-4 rounded-lg hover:bg-gray-300">
+          <img src="./assets/2.svg" alt="" />
+          <span class="font-body">electron developer</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+        </div>
+     
+
+      </nav>
+      <!-- Navbar end here -->
+    </header>
     <!-- Header section end here -->
 
     <!-- Main section start from here -->
     <main></main>
     <!-- Main section ecd here -->
-     
+
     <!-- Footer section start from here -->
     <footer></footer>
     <!-- Footer section end here -->
+
+    <script src="./script.js"></script>
   </body>
 </html>
